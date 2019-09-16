@@ -1,8 +1,13 @@
 import fetch from 'isomorphic-unfetch';
+import Layout from '../../components/Layout';
 
 const Item = (props) => {
     console.log("las props de /items/id: ", props);
-    return <p>Page de /items/:id</p>
+    return (
+        <Layout>
+            <p>Page de /items/:id</p>
+        </Layout>
+    )
 }
 
 Item.getInitialProps = async ({ req }) => {
