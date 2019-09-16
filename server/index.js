@@ -10,10 +10,9 @@ app.prepare().then( () => {
     const router = express.Router();
 
     router.get('/', (req, res, next) => {
-        if(req.query.q){
-            let query = req.query.q;
-            console.log("calling /items");
-            return app.render(req, res, `/items?q=${query}`);
+        if(req.query.search){
+            let query = req.query.search;
+            return app.render(req, res, `/items?search=${query}`);
         }
         
         res.send('Calling the / route');

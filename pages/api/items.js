@@ -1,4 +1,4 @@
 export default (req, res) => {
-    console.log("el objeto req negro: ", req);
-    res.send("Todo bien papu");
+    //console.log("el objeto req de /items: ", req);
+    res.status(200).json({ message: 'Response from /items' })
 }
