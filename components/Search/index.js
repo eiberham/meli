@@ -1,32 +1,29 @@
 import React, { useState, useRef } from "react";
 import { Formik } from 'formik';
-import * as Yup from 'yup';
-import { Input } from "semantic-ui-react";
+import SearchForm from "../Forms/SearchForm";
+import Router from 'next/router';
+import { withRouter } from 'next/router';
 
-const Search = () => {
-    const [term, setTerm] = useState('');
+const Search = props => {
+    // Save in context the search value
+    const { router } = props;
     return (
         <React.Fragment>
-            <Input
-                id="search"
-                name="search"
-                type="text"
-                size="massive"
-                placeholder="Nunca dejes de buscar ..."
-                value={term}
-                onChange={(e) => setTerm(e.target.value)}
-                action={{
-                    placeholder: '',
-                    color: 'teal',
-                    content: 'Search',
-                    onClick: () => {
-                        
+            <Formik
+                render={props => <SearchForm {...props} />}
+                initialValues={{ search: '' }}
+                onSubmit={ ({search}, actions) => {
+                    try {
+                        // Hacer la request con axios o fetch
+                        router.push(`/items?search=${search}`);
+                    }catch(error){
+                        console.error(error);
                     }
+
                 }}
             />
-            <p>{ term }</p>
         </React.Fragment>
     )
 };
 
-export default Search;
+export default withRouter(Search);

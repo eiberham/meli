@@ -1,7 +1,8 @@
 .header {
     grid-area: head;
-    /* background-color: #fff159; */
+    background-color: #fff159;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 6vh;
 }

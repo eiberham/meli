@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from 'semantic-ui-react';
 
-const Search = props => {
+const SearchForm = props => {
     const {
         values: { search },
         errors,
@@ -27,8 +27,8 @@ const Search = props => {
                     type="text"
                     size="massive"
                     placeholder="Nunca dejes de buscar ..."
-                    value={term}
-                    onChange={change.bind(null, "url")}
+                    value={search}
+                    onChange={change.bind(null, "search")}
                     action={{
                         placeholder: '',
                         color: 'teal',
@@ -38,10 +38,9 @@ const Search = props => {
                         }
                     }}
                 />
-                <p>{ term }</p>
             </form>
         </React.Fragment>
     );
 }
 
-export default Search;
+export default SearchForm;
