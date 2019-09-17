@@ -1,12 +1,15 @@
 import React from 'react';
-import Header from '../components/Header';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+
 
 const Index = () => (
-    <div>
-      <p>Hello Next.js</p>
-      <Header />
-    </div>
-  );
+    <Layout>
+      <Link href="/items?search=remeras" as="/items?search=remeras" prefetch={true}>
+          <a>About Us</a>
+      </Link>
+    </Layout>
+);
   
 export default Index;
   

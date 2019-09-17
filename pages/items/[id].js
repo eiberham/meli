@@ -1,18 +1,23 @@
-import { useRouter } from 'next/router';
-import axios from 'axios';
+import fetch from 'isomorphic-unfetch';
+import Layout from '../../components/Layout';
 
-const Items = () => {
-    const router = useRouter();
-    console.log("router: ", router);
-    const { q } = router.query;
-
-    return <p>la query: { q }</p>
+const Item = (props) => {
+    console.log("las props de /items/id: ", props);
+    return (
+        <Layout>
+            <p>Page de /items/:id</p>
+        </Layout>
+    )
 }
 
-Items.getInitialProps = async ({ req }) => {
-    const res = await axios.get('http://localhost:3000/api/items');
-    console.log(res.data);
-    return { data: res.data }
+Item.getInitialProps = async ({ req }) => {
+    const {
+        query: { id },
+    } = req;
+    const response = await fetch(`http://localhost:3000/api/items/${id}`);
+    const data = await response.json();
+    console.log(data);
+    return { data }
 }
 
-export default Items;
+export default Item;
