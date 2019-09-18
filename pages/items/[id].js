@@ -16,7 +16,7 @@ Item.getInitialProps = async ({ req }) => {
     } = req;
     const response = await fetch(`http://localhost:3000/api/items/${id}`);
     const data = await response.json();
-    console.log(data);
+    //console.log(data);
     return { data }
 }
 

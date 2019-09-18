@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Formik } from 'formik';
 import SearchForm from "../Forms/SearchForm";
-import Router from 'next/router';
+//import Router from 'next/router';
 import { withRouter } from 'next/router';
 
 const Search = props => {
