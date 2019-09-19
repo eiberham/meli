@@ -1,11 +1,21 @@
 import fetch from 'isomorphic-unfetch';
 import Layout from '../../components/Layout';
+import Breadcrumb from '../../components/Breadcrumb';
+import ProductList from '../../components/ProductList';
+import { withRouter } from 'next/router';
 
 const Items = (props) => {
     console.log("las props de /items: ", props);
+    const { items } = props;
+
+    const onItemSelect = () => {
+
+    }
+
     return (
         <Layout>
-            Page de /items
+            <Breadcrumb />
+            <ProductList items={items} onItemSelect={() => console.log("product selected")}/>
         </Layout>
     );
 };
@@ -20,4 +30,4 @@ Items.getInitialProps = async (context) => {
     return data;
 }
 
-export default Items;
+export default withRouter(Items);

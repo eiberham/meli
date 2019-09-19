@@ -1,0 +1,24 @@
+.item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &-image {
+        width: 25%;
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    &-title {
+        width: 60%;
+    }
+
+    &-price {img {
+        width: 150px;
+        height: 150px;
+    }
+        width: 15%;
+    }
+}

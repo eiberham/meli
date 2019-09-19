@@ -1,11 +1,20 @@
 import React from 'react';
 import './product-list.scss';
+import PropTypes from 'prop-types';
+
+import ProductItem from '../ProductItem';
 
 const ProductList = props => {
-    const { items } = props;
+    const { items, onItemSelect } = props;
     return (
         <React.Fragment>
-
+            {items && items.map((item, index) => (
+                <ProductItem 
+                    key={index} 
+                    product={item} 
+                    onProductSelect={onItemSelect} 
+                />
+            ))}
         </React.Fragment>
     );
 };
