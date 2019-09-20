@@ -6,16 +6,16 @@ import { withRouter } from 'next/router';
 
 const Items = (props) => {
     console.log("las props de /items: ", props);
-    const { items } = props;
+    const { items, router } = props;
 
-    const onItemSelect = () => {
-
+    const onItemSelect = (id) => {
+        router.push(`/items/${id}`)
     }
 
     return (
         <Layout>
             <Breadcrumb />
-            <ProductList items={items} onItemSelect={() => console.log("product selected")}/>
+            <ProductList items={items} onItemSelect={onItemSelect}/>
         </Layout>
     );
 };

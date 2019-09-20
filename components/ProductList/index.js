@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { setState } from 'react';
 import './product-list.scss';
 import PropTypes from 'prop-types';
 
@@ -6,15 +6,20 @@ import ProductItem from '../ProductItem';
 
 const ProductList = props => {
     const { items, onItemSelect } = props;
+
+    const onProductSelect = ({id}) => {
+        onItemSelect(id);
+    }
+
     return (
         <React.Fragment>
             {items && items.map((item, index) => (
                 <ProductItem 
                     key={index} 
                     product={item} 
-                    onProductSelect={onItemSelect} 
+                    onProductSelect={() => onProductSelect(item)} 
                 />
-            ))}
+            ))}content
         </React.Fragment>
     );
 };

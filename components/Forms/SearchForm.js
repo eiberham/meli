@@ -25,14 +25,14 @@ const SearchForm = props => {
                     id="search"
                     name="search"
                     type="text"
-                    size="massive"
+                    size="small"
                     placeholder="Nunca dejes de buscar ..."
                     value={search}
                     onChange={change.bind(null, "search")}
                     action={{
                         placeholder: '',
                         color: 'teal',
-                        content: 'Search',
+                        icon: 'search',
                         onClick: () => {
                             
                         }

@@ -10,10 +10,11 @@ const Item = (props) => {
     )
 }
 
-Item.getInitialProps = async ({ req }) => {
+Item.getInitialProps = async (context) => {
     const {
         query: { id },
-    } = req;
+    } = context;
+    
     const response = await fetch(`http://localhost:3000/api/items/${id}`);
     const data = await response.json();
     //console.log(data);
