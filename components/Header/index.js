@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.scss';
+import './styles.scss';
 import Search from '../Search';
 
 const Header = () => {

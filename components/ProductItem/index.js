@@ -1,5 +1,5 @@
 import React from 'react';
-import './product-item.scss';
+import './styles.scss';
 import PropTypes from 'prop-types';
 
 const ProductItem = ({product, onProductSelect}) => {

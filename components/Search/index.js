@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import './styles.scss';
 import { Formik } from 'formik';
 import SearchForm from "../Forms/SearchForm";
 //import Router from 'next/router';

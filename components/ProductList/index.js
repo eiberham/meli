@@ -1,5 +1,5 @@
 import React, { setState } from 'react';
-import './product-list.scss';
+import './styles.scss';
 import PropTypes from 'prop-types';
 
 import ProductItem from '../ProductItem';

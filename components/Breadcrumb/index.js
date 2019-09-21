@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.scss';
 import { Breadcrumb as Nav } from 'semantic-ui-react';
 
 const Breadcrumb = props => {

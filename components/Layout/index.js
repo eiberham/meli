@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import './layout.scss';
+import './styles.scss';
 
 import Header from '../Header';
 
