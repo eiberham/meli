@@ -20,7 +20,7 @@ app.prepare().then( () => {
     });
 
     router.get('/:id', (req, res) => {
-        return app.render(req, res, '/items', { id: req.params.id });
+        return app.render(req, res, '/items', { ...req.params, ...req.query });
     });
 
     server.get('*', (req, res) => {

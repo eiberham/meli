@@ -4,9 +4,8 @@ import _ from 'lodash';
 import meli from '../../../services/meli';
 
 export default (req, res) => {
-    console.log("el objeto req desde api: ", req.params);
     const client = redis.createClient();
-    let id = req.params.id;
+    let id = req.query.id;
 
     client.get(id, async (err, result) => {
         if (result) {

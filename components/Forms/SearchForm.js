@@ -31,7 +31,7 @@ const SearchForm = props => {
                     onChange={change.bind(null, "search")}
                     action={{
                         placeholder: '',
-                        color: 'teal',
+                        color: 'grey',
                         icon: 'search',
                         onClick: () => {
                             

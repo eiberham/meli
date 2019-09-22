@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.scss';
+import PropTypes from 'prop-types';
 import { Breadcrumb as Nav } from 'semantic-ui-react';
 
 const Breadcrumb = props => {
@@ -20,6 +21,10 @@ const Breadcrumb = props => {
             ))}
         </Nav>
     )
+}
+
+Breadcrumb.propTypes = {
+    links: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
 export default Breadcrumb;

@@ -1,0 +1,8 @@
+.item-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 250px);
+    grid-gap: 0;
+    grid-template-areas: "image price"
+                         "description price"
+}
