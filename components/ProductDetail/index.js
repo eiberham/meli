@@ -17,7 +17,7 @@ const ProductDetail = props => {
                     <p>{item.description}</p>
                 </div>
                 <div className="item-detail__price">
-                    <span>{item.amount}</span>
+                    <span>$ {item.price.amount}</span>
                 </div>
             </div>
         </React.Fragment>
