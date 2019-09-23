@@ -1,24 +1,49 @@
 .item {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    }
 
     &-image {
         width: 25%;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        border-radius: 4px;
         img {
             width: 150px;
             height: 150px;
         }
     }
 
-    &-title {
+    &-description {
         width: 60%;
     }
 
-    &-price {img {
-        width: 150px;
-        height: 150px;
+    &-title {
+        font-size: 18px;
     }
-        width: 15%;
+
+    &-price {
+        font-size: 24px;
+    }
+
+    &-decimals {
+        line-height: 1.8;
+        font-size: 14px;
+        position: relative;
+        top: -8px;
+    }
+
+    &-condition {
+        font-size: 12px;
+        padding: 0 2.5rem;
     }
 }

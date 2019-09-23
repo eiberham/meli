@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
+import items from '../../pages/items';
 
 const ProductItem = ({product, onProductSelect}) => {
     return (
@@ -9,8 +10,23 @@ const ProductItem = ({product, onProductSelect}) => {
                 <div className="item-image">
                     <img src={product.picture} alt={product.title} />
                 </div>
-                <div className="item-title">{product.title}</div>
-                <div className="item-price">{product.price.amount}</div>
+                
+                <div className="item-description">
+                    <div className="item-price">
+                        $ {(parseInt(product.price.amount)).toLocaleString()}
+                        <span className="item-decimals">{product.price.decimals}</span>
+                    </div>
+                    <div className="item-title">{product.title}</div>
+                </div>
+
+                <div className="item-condition">
+                    {product.condition === 'new' ? (
+                        <span>Nuevo</span>
+                    ) : ( 
+                        <span>Usado</span>
+                    )}
+                </div>
+                
             </div>
         </React.Fragment>
     );

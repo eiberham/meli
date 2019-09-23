@@ -1,8 +1,26 @@
 .item-detail {
+    background: #fff;
+    min-height: 80vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 250px);
+    grid-template-columns: 55vw 1fr;
+    grid-template-rows: repeat(2, min-content);
     grid-gap: 0;
     grid-template-areas: "image price"
-                         "description price"
+                         "description price";
+
+    &__image {
+        grid-area: image;
+    }
+
+    &__description {
+        grid-area: description;
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    &__price {
+        grid-area: price;
+    }
 }

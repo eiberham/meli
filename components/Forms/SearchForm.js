@@ -1,5 +1,10 @@
 import React from 'react';
 import { Input } from 'semantic-ui-react';
+import styled from "@emotion/styled";
+
+const Form = styled.form `
+    width: 100%;
+`;
 
 const SearchForm = props => {
     const {
@@ -20,8 +25,9 @@ const SearchForm = props => {
 
     return (
         <React.Fragment>
-            <form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit}>
                 <Input
+                    fluid
                     id="search"
                     name="search"
                     type="text"
@@ -31,14 +37,13 @@ const SearchForm = props => {
                     onChange={change.bind(null, "search")}
                     action={{
                         placeholder: '',
-                        color: 'grey',
                         icon: 'search',
                         onClick: () => {
                             
                         }
                     }}
                 />
-            </form>
+            </Form>
         </React.Fragment>
     );
 }

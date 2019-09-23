@@ -13,13 +13,15 @@ const ProductList = props => {
 
     return (
         <React.Fragment>
-            {items && items.map((item, index) => (
-                <ProductItem 
-                    key={index} 
-                    product={item} 
-                    onProductSelect={() => onProductSelect(item)} 
-                />
-            ))}content
+            <div className="products">
+                {items && items.map((item, index) => (
+                    <ProductItem 
+                        key={index} 
+                        product={item} 
+                        onProductSelect={() => onProductSelect(item)} 
+                    />
+                ))}
+            </div>
         </React.Fragment>
     );
 };
