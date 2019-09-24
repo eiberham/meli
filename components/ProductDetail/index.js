@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
+import { Button } from 'semantic-ui-react'
 
 const ProductDetail = props => {
     const { item } = props;
@@ -17,7 +18,22 @@ const ProductDetail = props => {
                     <p>{item.description}</p>
                 </div>
                 <div className="item-detail__price">
-                    <span>$ {item.price.amount}</span>
+                    <span className="item-detail__condition">
+                        {item.condition === 'new' ? (
+                            `Nuevo - ${item.sold_quantity} vendidos`
+                        ) : (
+                            `Usado - ${item.sold_quantity} vendidos`
+                        )}
+                    </span>
+                    <span className="item-detail__title">{item.title}</span>
+                    <span className="item-detail__price-amount">
+                        $ {(parseInt(item.price.amount)).toLocaleString()}
+                    </span>
+                    <span className="item-detail__price-decimals">
+                        {item.price.decimals}
+                    </span>
+
+                    <Button fluid color="blue">Comprar</Button>
                 </div>
             </div>
         </React.Fragment>

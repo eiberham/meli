@@ -2,6 +2,7 @@
     background: #fff;
     min-height: 80vh;
     padding: 2rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: 55vw 1fr;
     grid-template-rows: repeat(2, min-content);
@@ -29,11 +30,36 @@
         p {
             font-size: 16px;
             text-align: justify;
+            margin: 32px 0;
         }
     }
 
+    &__title {
+        font-size: 24px;
+        display: inline-block;
+        margin: 16px 0 0 0;
+    }
+
+    &__condition {
+        font-size: 14px;
+        margin: 32px 0 14px 0;
+    }
+
+    /*TODO: fix these names*/
     &__price {
         grid-area: price;
-        font-size: 46px;
+
+        &-amount {
+            font-size: 46px;
+            margin: 32px 0;
+            display: inline-block;
+        }
+
+        &-decimals {
+           line-height: 1.8;
+           font-size: 22px;
+           position: relative;
+           top: -12px;
+        }
     }
 }
