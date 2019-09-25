@@ -10,6 +10,12 @@ The application so far presents the following features:
 <li>Pages responsiveness and overall styling via CSS grid and Flexbox.</li>
 </ul>
 
+Here's a screenshot of one of the pages:
+
+<p align="center">
+  <img src="./meli.png" alt="snapshot" />  
+</p>
+
 ## How to run it ?
 
 First, as usual clone the repo:
