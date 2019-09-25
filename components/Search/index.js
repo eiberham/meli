@@ -2,11 +2,9 @@ import React from "react";
 import './styles.scss';
 import { Formik } from 'formik';
 import SearchForm from "../Forms/SearchForm";
-//import Router from 'next/router';
 import { withRouter } from 'next/router';
 
 const Search = props => {
-    // Save in context the search value
     const { router } = props;
     return (
         <div className="search">

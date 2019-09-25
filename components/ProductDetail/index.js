@@ -17,19 +17,19 @@ const ProductDetail = props => {
                     <h1>Descripción del producto</h1>
                     <p>{item.description}</p>
                 </div>
-                <div className="item-detail__price">
-                    <span className="item-detail__condition">
+                <div className="item-detail__summary">
+                    <span className="item-detail__summary-condition">
                         {item.condition === 'new' ? (
                             `Nuevo - ${item.sold_quantity} vendidos`
                         ) : (
                             `Usado - ${item.sold_quantity} vendidos`
                         )}
                     </span>
-                    <span className="item-detail__title">{item.title}</span>
-                    <span className="item-detail__price-amount">
+                    <span className="item-detail__summary-title">{item.title}</span>
+                    <span className="item-detail__summary-amount">
                         $ {(parseInt(item.price.amount)).toLocaleString()}
                     </span>
-                    <span className="item-detail__price-decimals">
+                    <span className="item-detail__summary-decimals">
                         {item.price.decimals}
                     </span>
 

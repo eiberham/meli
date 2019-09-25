@@ -34,20 +34,19 @@
         }
     }
 
-    &__title {
-        font-size: 24px;
-        display: inline-block;
-        margin: 16px 0 0 0;
-    }
-
-    &__condition {
-        font-size: 14px;
-        margin: 32px 0 14px 0;
-    }
-
-    /*TODO: fix these names*/
-    &__price {
+    &__summary {
         grid-area: price;
+
+        &-title {
+            font-size: 24px;
+            display: inline-block;
+            margin: 16px 0 0 0;
+        }
+    
+        &-condition {
+            font-size: 14px;
+            margin: 32px 0 14px 0;
+        }
 
         &-amount {
             font-size: 46px;
@@ -62,4 +61,32 @@
            top: -12px;
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    .item-detail {
+        grid-auto-rows: minmax(120px, max-content);
+        grid-template-columns: 1fr;
+        grid-template-areas: "image"
+                                "description"
+                                "price";
+        text-align: center;
+
+        &__image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            figure {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    height: 25vh;
+                    width: max-content;
+                }
+            }
+        }
+    }
+  
 }

@@ -15,7 +15,7 @@ const Breadcrumb = props => {
                         ) : (
                             <React.Fragment>
                                 <Nav.Section link>{ link }</Nav.Section>
-                                <Nav.Divider>/</Nav.Divider>
+                                <Nav.Divider icon="right angle" />
                             </React.Fragment>
                         )}
                     </React.Fragment>
