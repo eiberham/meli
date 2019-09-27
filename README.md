@@ -23,10 +23,10 @@ First, as usual clone the repo:
 ```console
 foo@bar:~$ git clone https://github.com/wwleak/meli.git
 ```
-Install redis:
+Install && start redis:
 
 ```
-foo@bar:~$ sudo apt-get install redis-server
+foo@bar:~$ sudo apt-get install redis-server && redis-server
 ```
 
 Then install all the dependencies
