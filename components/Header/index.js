@@ -1,15 +1,12 @@
 import React from 'react';
 import './styles.scss';
-import Search from '../Search';
-import Logo from '../Logo';
 
-const Header = () => {
+const Header = ({children}) => {
     return (
         <React.Fragment>
             <header className="header">
                 <div className="header-content">
-                    <Logo />
-                    <Search />
+                    { children }
                 </div>
             </header>
         </React.Fragment>
