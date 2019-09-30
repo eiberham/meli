@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb matches snapshot 1`] = `
+<div
+  className="breadcrumb"
+>
+  <div
+    className="ui small breadcrumb"
+  >
+    <a
+      className="section"
+      onClick={[Function]}
+    >
+      Root
+    </a>
+    <i
+      aria-hidden="true"
+      className="right angle icon divider"
+      onClick={[Function]}
+    />
+    <a
+      className="section"
+      onClick={[Function]}
+    >
+      Item
+    </a>
+    <i
+      aria-hidden="true"
+      className="right angle icon divider"
+      onClick={[Function]}
+    />
+    <div
+      className="active section"
+      onClick={[Function]}
+    >
+      Subitem
+    </div>
+  </div>
+</div>
+`;

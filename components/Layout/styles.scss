@@ -27,3 +27,18 @@ html {
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    html {
+      background: rgba(black, .8);
+  
+      .container {
+        grid-auto-rows: minmax(120px, max-content);
+        grid-template-areas: "head head head"
+                             "side side side"
+                             "main main main"
+                             "foot foot foot";
+      }
+    }
+  
+  }
