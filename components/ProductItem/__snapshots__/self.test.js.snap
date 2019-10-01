@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductItem matches snapshot 1`] = `
+<div
+  className="item"
+  onClick={[MockFunction]}
+>
+  <div
+    className="item-image"
+  >
+    <img
+      alt="Remera Lisa Algodón Jersey Peinado Premium"
+      src="http://mla-s1-p.mlstatic.com/876978-MLA31035095700_062019-I.jpg"
+    />
+  </div>
+  <div
+    className="item-description"
+  >
+    <div
+      className="item-price"
+    >
+      $ 
+      259
+      <span
+        className="item-decimals"
+      >
+        
+      </span>
+    </div>
+    <div
+      className="item-title"
+    >
+      Remera Lisa Algodón Jersey Peinado Premium
+    </div>
+  </div>
+  <div
+    className="item-condition"
+  >
+    <span>
+      Nuevo
+    </span>
+  </div>
+</div>
+`;
