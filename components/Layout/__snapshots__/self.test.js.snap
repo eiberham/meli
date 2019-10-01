@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout matches snapshot 1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <div
+      className="header-content"
+    >
+      <div
+        className="logo"
+      >
+        <img
+          alt="logo"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          src="/static/Logo_ML.png"
+        />
+      </div>
+      <div
+        className="search"
+      >
+        <form
+          className="css-1vr8bhw"
+          onSubmit={[Function]}
+        >
+          <div
+            className="ui small fluid action input"
+          >
+            <input
+              id="search"
+              name="search"
+              onChange={[Function]}
+              placeholder="Nunca dejes de buscar ..."
+              type="text"
+              value=""
+            />
+            <button
+              className="ui icon button"
+              onClick={[Function]}
+              placeholder=""
+            >
+              <i
+                aria-hidden="true"
+                className="search icon"
+                onClick={[Function]}
+              />
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>,
+  <div
+    className="wrapper"
+  >
+    <div
+      className="content"
+    />
+  </div>,
+]
+`;

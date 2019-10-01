@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo matches snapshot 1`] = `
+<div
+  className="logo"
+>
+  <img
+    alt="logo"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    src="/static/Logo_ML.png"
+  />
+</div>
+`;
