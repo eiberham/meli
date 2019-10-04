@@ -1,11 +1,12 @@
+import { Fragment } from 'react';
 import fetch from 'isomorphic-unfetch';
 import Layout from '../../components/Layout';
 import Breadcrumb from '../../components/Breadcrumb';
 import ProductList from '../../components/ProductList';
+import Loading from '../../components/Loading';
 import { withRouter } from 'next/router';
 
-const Items = (props) => {
-    console.log("las props de /items: ", props);
+const Items = props => {
     const { items, router, categories } = props;
 
     const onItemSelect = (id) => {
@@ -14,8 +15,14 @@ const Items = (props) => {
 
     return (
         <Layout>
-            <Breadcrumb links={categories} />
-            <ProductList items={items} onItemSelect={onItemSelect}/>
+            { (items) ? (
+                <Fragment>
+                    <Breadcrumb links={categories} />
+                    <ProductList items={items} onItemSelect={onItemSelect}/>
+                </Fragment>
+            ) : (
+                <Loading size="massive" show />
+            )}
         </Layout>
     );
 };
