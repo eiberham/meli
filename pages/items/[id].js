@@ -6,7 +6,6 @@ import ProductDetail from '../../components/ProductDetail';
 const Item = props => {
     const { item, categories } = props;
 
-    console.log("las props de /items/id: ", props);
     return (
         <Layout>
             <Breadcrumb links={categories} />
