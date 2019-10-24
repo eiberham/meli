@@ -16,6 +16,15 @@ Here's a screenshot of one of the pages:
   <img src="./meli.png" alt="snapshot" />  
 </p>
 
+<table>
+  <tr>
+    <td><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/wwleak/meli?style=for-the-badge"></td>
+    <td><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wwleak/meli?style=for-the-badge"></td>
+    <td><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wwleak/meli?style=for-the-badge"></td>
+    <td><img alt="GitHub issues" src="https://img.shields.io/github/issues/wwleak/meli?style=for-the-badge"></td>
+  </tr>
+</table>
+
 ## How to run it ?
 
 First, as usual clone the repo:
